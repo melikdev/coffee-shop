@@ -1,0 +1,158 @@
+:root {
+  --primary-bg-color: #1b1d1f;
+  --main-bg-color: #111315;
+  --secondary-color: #6f757c;
+  --price-tag-color: #bee3cc;
+  --tag-color: #f6c768;
+  --ff-primary: "DM Sans", sans-serif;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  color: inherit;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+}
+
+.main-container {
+  position: relative;
+  background: var(--main-bg-color);
+  min-height: 150vh;
+}
+
+main {
+  background: var(--primary-bg-color);
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1400px;
+  border-radius: 20px;
+}
+
+header {
+  min-height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--price-tag-color);
+}
+
+header img {
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem;
+}
+
+.title h1 {
+  color: #fff;
+  font-size: 35px;
+}
+
+.title p {
+  color: var(--secondary-color);
+  max-width: 500px;
+  text-align: center;
+}
+
+.title .buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.title button {
+  width: 120px;
+  height: 40px;
+  border-radius: 7px;
+  color: #fff;
+  background: var(--secondary-color);
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.product {
+  flex-basis: 25%;
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.product img {
+  height: 220px;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.product .title-price {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.product .price-tag {
+  background: var(--price-tag-color);
+  padding: 0.5rem;
+  font-size: 12px;
+  color: #000;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.votes {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.votes .vote {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.votes img {
+  height: 20px;
+  width: 20px;
+}
+
+.vote span {
+  color: var(--secondary-color);
+}
+
+@media (min-width: 641px) {
+  header img {
+    min-height: 300px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 640px) {
+  header img {
+    min-height: 200px;
+    object-fit: cover;
+  }
+}
